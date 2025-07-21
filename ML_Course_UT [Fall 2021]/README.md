@@ -1,11 +1,96 @@
-# Machine-Learning
+# 🎵 ML-Based Music Instrument Classification & Clustering
 
-This Machine Learning project is aimed at accurately classifying Iranian Traditional and Global music instruments, which are categorized into 6 types: Ney, Piano, Santour, Setar, Tar, and Violon. To achieve this goal, the project utilizes two primary Machine Learning techniques - classification and clustering.
+This Machine Learning project aims to accurately **classify** and **cluster** traditional Iranian and global musical instruments. It focuses on six instruments:
 
-To build the dataset, the project employs frequency sampling, analyzing over 1400 music files, resulting in a dataset of 5.5+ GB in size. The project consists of the following main steps: Data Cleaning and Preprocessing, followed by classification and clustering methods.
+- **Ney**
+- **Piano**
+- **Santour**
+- **Setar**
+- **Tar**
+- **Violon**
 
-In terms of classification, several Machine Learning algorithms have been implemented, including K-Nearest Neighbors (KNN), Decision Tree, Boosting, and Multilayer Perceptron (MLP). These algorithms are utilized to accurately classify the different types of musical instruments present in the dataset.
+The project leverages both **supervised learning** (classification) and **unsupervised learning** (clustering) to achieve its goals. It was developed as part of the **Fall 2021 Machine Learning course**.
 
-Moreover, for the clustering phase, the project uses two common methods: K-Means and Hierarchical Clustering. These methods enable the project to identify patterns in the dataset and group similar instruments into distinct clusters.
+---
 
-Overall, this project is an exciting and challenging Machine Learning endeavor that will contribute to our understanding of how Machine Learning can be applied to the domain of music classification. The project holds a lot of potential for improving the accuracy of identifying Iranian Traditional and Global music instruments, and it can pave the way for further research in this area.
+## 📂 Dataset
+
+- **Total size:** ~5.5 GB
+- **Samples:** 1400+ audio files
+- **Features:** Extracted from frequency sampling and signal analysis.
+- **Label source & contributors:** [Link to dataset and collectors](https://docs.google.com/spreadsheets/d/1loXFMd3MiwldArxzswm3GqNFW7SiV0QjJpFgQsF98ns/edit?gid=0#gid=0) 
+
+The dataset was preprocessed and summarized into a tabular format (`data.csv`) for machine learning tasks.
+
+---
+
+## 📁 Project Structure
+
+```
+├── Decision Tree & Boosting.ipynb
+├── KNN.ipynb
+├── Clustring.ipynb
+├── MLP.ipynb
+├── README.md
+└── data.csv
+```
+
+
+---
+
+## 🧠 Techniques Used
+
+### 🔎 Classification Algorithms
+- **K-Nearest Neighbors (KNN)**
+- **Decision Tree**
+- **Boosting (e.g., AdaBoost, Gradient Boosting)**
+- **Multilayer Perceptron (MLP)**
+
+### 📊 Clustering Algorithms
+- **K-Means Clustering**
+- **Hierarchical Clustering (Agglomerative)**
+
+---
+
+## 📓 Notebooks Overview
+
+### `KNN.ipynb`
+- Implements **K-Nearest Neighbors** to classify instrument types.
+- Includes tuning of `k` parameter and distance metrics.
+- Confusion matrix and accuracy visualizations included.
+
+### `Decision Tree & Boosting.ipynb`
+- Contains experiments using **Decision Trees** and **Boosting techniques**.
+- Comparison between base learners and ensemble methods.
+- Visualizes decision boundaries and feature importances.
+
+### `MLP.ipynb`
+- Implements a **Multilayer Perceptron** using `sklearn.neural_network`.
+- Explores different architectures and activation functions.
+- Includes training/validation loss curves.
+
+### `Clustring.ipynb`
+- Applies **K-Means** and **Hierarchical Clustering** on the same dataset.
+- Uses silhouette scores and dendrograms for evaluation.
+- Visualizes cluster groupings with PCA or t-SNE.
+
+---
+
+## 📊 Sample Visualizations
+
+### Clustering Result (PCA Projection)
+<img width="640" height="458" alt="PCA" src="https://github.com/user-attachments/assets/e434a4c4-6b37-401b-a439-30d669d4d121" />
+
+### MLP Training Loss and Accuracy
+
+<img width="386" height="278" alt="mlp" src="https://github.com/user-attachments/assets/7db8a863-4b45-4065-b32f-01ad67f6eee2" />
+<img width="392" height="278" alt="mlpLoss" src="https://github.com/user-attachments/assets/31f246df-4ddf-465a-bffb-6a86142a7961" />
+
+---
+
+## 🛠️ How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/music-instrument-ml.git
+   cd music-instrument-ml```
